@@ -1,0 +1,20 @@
+Outline
+Major features:
+- Random generator for various tables
+- Scraping /r/d100 to automatically create random tables
+- Random map builder
+- Character builder/manager
+- Character tracker
+- Magic item manager
+- Monster builder/manager
+- NPC manager
+
+Table Generator
+ * Agnostic: can be anything as long as it's in table form
+ * Components:
+    - Level 0,  Net-facing:     Collect stuff for tables; leave data raw and in HTML form probably
+    - Level 1,  Parsing:        Try and parse table data from the HTML with BS4 or scrapy probably
+    - Level 2a, Construction:   Use the parsed data to construct a table
+    - Level 2b, File I/O:       Save the constructed table or load an existing one. Loading skips the previous three levels
+    - Level 3,  Table Ops:      Functions that Work with table data to do things for the user
+    - Level 4,  Nit-facing:     User interface
